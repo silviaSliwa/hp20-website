@@ -271,7 +271,7 @@ h3 {
 
 .hero-metrics div,
 .glass-card,
-.screenshot-placeholder {
+.screenshot-card {
   border: 1px solid var(--stroke);
   background:
     linear-gradient(145deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.045)),
@@ -362,6 +362,15 @@ h3 {
     radial-gradient(circle at 78% 12%, rgba(57, 215, 255, 0.3), transparent 34%),
     radial-gradient(circle at 80% 64%, rgba(255, 152, 31, 0.24), transparent 38%),
     linear-gradient(180deg, #0c2f76, #05122b 78%);
+}
+
+.phone-shot {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 34px;
+  background: #05122a;
+  object-fit: cover;
 }
 
 .app-topbar {
@@ -555,41 +564,39 @@ h3 {
   align-items: end;
 }
 
-.screenshot-placeholder {
+.screenshot-card {
   display: grid;
-  min-height: 360px;
-  place-items: end start;
+  gap: 16px;
+  margin: 0;
   border-radius: var(--radius);
-  padding: 22px;
+  padding: 14px 14px 18px;
   background:
     radial-gradient(circle at 55% 12%, rgba(57, 215, 255, 0.28), transparent 42%),
     linear-gradient(160deg, rgba(255, 255, 255, 0.13), rgba(255, 255, 255, 0.04));
   overflow: hidden;
 }
 
-.screenshot-placeholder::before {
+.screenshot-card img {
   display: block;
   width: 100%;
-  height: 66%;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: var(--radius);
-  content: "";
-  background:
-    linear-gradient(90deg, rgba(255, 255, 255, 0.14), transparent 32%),
-    repeating-linear-gradient(to bottom, rgba(255, 255, 255, 0.12) 0 12px, transparent 12px 30px);
+  height: auto;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 28px;
+  box-shadow:
+    0 18px 58px rgba(0, 0, 0, 0.42),
+    0 0 0 1px rgba(57, 215, 255, 0.1);
 }
 
-.screenshot-placeholder span {
-  margin-top: 18px;
+.screenshot-card figcaption {
   color: var(--soft);
   font-weight: 900;
 }
 
-.screenshot-placeholder.tall {
-  min-height: 460px;
+.screenshot-card.tall {
   background:
     radial-gradient(circle at 50% 18%, rgba(255, 189, 61, 0.24), transparent 42%),
     linear-gradient(160deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.04));
+  transform: translateY(-24px);
 }
 
 .pricing-section {
@@ -827,9 +834,8 @@ h3 {
     padding: 52px 0;
   }
 
-  .screenshot-placeholder,
-  .screenshot-placeholder.tall {
-    min-height: 300px;
+  .screenshot-card.tall {
+    transform: none;
   }
 
   .pricing-section {
