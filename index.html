@@ -3,147 +3,206 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>HP2.0 – Smart HP-träning</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="description" content="HP2.0 är en premiumapp för smart, adaptiv förberedelse inför Högskoleprovet." />
+  <title>HP2.0 | Smart HP-träning</title>
+  <link rel="icon" href="./app-icon.jpg" type="image/jpeg" />
+  <link rel="apple-touch-icon" href="./app-icon.jpg" />
+  <link rel="stylesheet" href="./style.css" />
 </head>
 <body>
-  <main class="page">
-    <nav class="nav">
-      <div class="brand">
-        <div class="logo">HP<span>2.0</span></div>
-        <div>
-          <strong>HP2.0</strong>
-          <p>Adaptive HP Preparation</p>
-        </div>
-      </div>
+  <header class="site-header">
+    <a class="brand" href="./index.html" aria-label="HP2.0 startsida">
+      <span class="brand-mark"><img src="./app-icon.jpg" alt="" /></span>
+      <span>
+        <strong>HP2.0</strong>
+        <small>Adaptiv HP-förberedelse</small>
+      </span>
+    </a>
 
-      <div class="links">
-        <a href="#features">Funktioner</a>
-        <a href="#premium">Premium</a>
-        <a href="privacy.html">Privacy</a>
-        <a href="terms.html">Terms</a>
-      </div>
+    <nav class="nav-links" aria-label="Primär navigering">
+      <a href="#features">Funktioner</a>
+      <a href="#screens">Skärmbilder</a>
+      <a href="#premium">Premium</a>
+      <a href="./privacy.html">Integritet</a>
+      <a href="./terms.html">Villkor</a>
     </nav>
+  </header>
 
-    <section class="hero">
-      <div class="heroText">
-        <div class="pill">Byggd för ditt mål</div>
-
-        <h1>Kom närmare din <span>drömutbildning.</span></h1>
-
-        <p>
-          HP2.0 hjälper dig plugga smartare inför Högskoleprovet med adaptiv träning,
-          historiska prov, misstagsbank och personlig prognos.
+  <main>
+    <section class="hero section-shell">
+      <div class="hero-copy">
+        <p class="eyebrow">HP-träning med precision</p>
+        <h1>Plugga smartare. Nå ditt HP-mål snabbare.</h1>
+        <p class="hero-lede">
+          HP2.0 kombinerar adaptiv träning, historiska prov, misstagsbank och
+          personlig prognos i en fokuserad iOS-upplevelse byggd för Högskoleprovet.
         </p>
 
-        <div class="actions">
-          <a class="primary" href="#">Kommer snart på App Store</a>
-          <a class="secondary" href="#features">Läs mer</a>
+        <div class="hero-actions" aria-label="Primära åtgärder">
+          <a class="button button-primary" href="#premium">Se Premium</a>
+          <a class="button button-ghost" href="#features">Utforska funktioner</a>
         </div>
 
-        <div class="trust">
-          <span>🔒 Säker & privat</span>
-          <span>📊 Datadriven träning</span>
-          <span>🇸🇪 Byggd i Sverige</span>
-        </div>
+        <dl class="hero-metrics" aria-label="Produktfordelar">
+          <div>
+            <dt>14 d</dt>
+            <dd>Svitfokus</dd>
+          </div>
+          <div>
+            <dt>87%</dt>
+            <dd>Träffbild</dd>
+          </div>
+          <div>
+            <dt>1.45+</dt>
+            <dd>Målprognos</dd>
+          </div>
+        </dl>
       </div>
 
-      <div class="phones">
-        <div class="phone small">
-          <div class="screen">
-            <p>Träna</p>
-            <h3>Välj kategori</h3>
-            <div class="row">Ordförståelse</div>
-            <div class="row">Kvantitativ förmåga</div>
-            <div class="row">Diagram & tabeller</div>
-            <div class="row">Läsförståelse</div>
+      <div class="hero-device" aria-label="Förhandsvisning av HP2.0-appen">
+        <div class="phone-frame phone-left" aria-hidden="true">
+          <div class="phone-screen compact-screen">
+            <span class="screen-kicker">Träna</span>
+            <h2>Kategori</h2>
+            <p class="mini-row">ORD</p>
+            <p class="mini-row">XYZ</p>
+            <p class="mini-row">DTK</p>
           </div>
         </div>
 
-        <div class="phone mainPhone">
-          <div class="screen">
-            <p>Dagens mission</p>
-            <h3>Repetera dagens viktigaste misstag</h3>
-            <button>Starta mission</button>
-            <div class="stats">
-              <div><strong>87%</strong><span>Träff</span></div>
-              <div><strong>14</strong><span>Streak</span></div>
+        <div class="phone-frame phone-main">
+          <div class="phone-screen">
+            <div class="app-topbar">
+              <span>Dagens uppdrag</span>
+              <strong>HP2.0</strong>
             </div>
+            <div class="mission-card">
+              <p>Repetition</p>
+              <h2>Reparera dina viktigaste misstag</h2>
+              <span class="progress-ring">87%</span>
+            </div>
+            <div class="insight-grid">
+              <div>
+                <strong>42</strong>
+                <span>frågor kvar</span>
+              </div>
+              <div>
+                <strong>+0.18</strong>
+                <span>trend</span>
+              </div>
+            </div>
+            <button class="app-button" type="button">Starta pass</button>
           </div>
         </div>
 
-        <div class="phone small">
-          <div class="screen">
-            <p>Drömutbildning</p>
-            <h3>KTH Civilingenjör</h3>
-            <div class="circle">1.42</div>
-            <small>Du är på god väg.</small>
+        <div class="phone-frame phone-right" aria-hidden="true">
+          <div class="phone-screen compact-screen">
+            <span class="screen-kicker">Mål</span>
+            <h2>KTH</h2>
+            <div class="score-pill">1.42</div>
+            <small>På god väg</small>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="features" class="featureStrip">
-      <article>
-        <span>📚</span>
-        <h3>Historiska prov</h3>
-        <p>Träna på riktiga HP-liknande pass.</p>
-      </article>
+    <section id="features" class="section-shell section-block">
+      <div class="section-heading">
+        <p class="eyebrow">Smartare progression</p>
+        <h2>Allt du behöver för ett bättre HP-resultat.</h2>
+        <p>
+          Designad som en premium iOS-app: snabb att skanna, enkel att använda
+          och fokuserad på de moment som ger verklig effekt.
+        </p>
+      </div>
 
-      <article>
-        <span>🧠</span>
-        <h3>Adaptiv träning</h3>
-        <p>Planen anpassas efter dina misstag.</p>
-      </article>
-
-      <article>
-        <span>📈</span>
-        <h3>Statistik</h3>
-        <p>Följ nivå, trend och förbättring.</p>
-      </article>
-
-      <article>
-        <span>🎯</span>
-        <h3>Drömutbildning</h3>
-        <p>Koppla HP-målet till en utbildning.</p>
-      </article>
+      <div class="feature-grid">
+        <article class="glass-card feature-card">
+          <span class="card-icon">01</span>
+          <h3>Adaptiv träning</h3>
+          <p>Passet formas efter dina svar, svagheter och tempo.</p>
+        </article>
+        <article class="glass-card feature-card">
+          <span class="card-icon">02</span>
+          <h3>Misstagsbank</h3>
+          <p>Samla, repetera och stäng kunskapsluckor innan provdagen.</p>
+        </article>
+        <article class="glass-card feature-card">
+          <span class="card-icon">03</span>
+          <h3>Historiska prov</h3>
+          <p>Träna med provnära uppgifter och realistiska pass.</p>
+        </article>
+        <article class="glass-card feature-card">
+          <span class="card-icon">04</span>
+          <h3>Målprognos</h3>
+          <p>Koppla din träning till utbildningen du vill komma in på.</p>
+        </article>
+      </div>
     </section>
 
-    <section class="cards">
-      <article class="card">
-        <h2>Byggd för resultat</h2>
+    <section id="screens" class="section-shell section-block split-section">
+      <div class="section-heading">
+        <p class="eyebrow">Skärmbilder</p>
+        <h2>En appupplevelse som känns lugn, snabb och premium.</h2>
         <p>
-          HP2.0 kombinerar repetition, analys och historiska prov för att hjälpa dig
-          fokusera på det som ger störst effekt.
+          Plats för skärmbilder från App Store, introduktion och nyckelflöden när de
+          slutliga iOS-skärmarna exporteras.
         </p>
-        <ul>
-          <li>Smart repetition av misstag</li>
-          <li>Personlig studieplan</li>
-          <li>Träning kopplad till ditt mål</li>
-        </ul>
-      </article>
+      </div>
 
-      <article id="premium" class="card premium">
-        <h2>Premium</h2>
+      <div class="screenshot-grid" aria-label="Platshållare för skärmbilder">
+        <article class="screenshot-placeholder">
+          <span>Översikt</span>
+        </article>
+        <article class="screenshot-placeholder tall">
+          <span>Uppdrag</span>
+        </article>
+        <article class="screenshot-placeholder">
+          <span>Framsteg</span>
+        </article>
+      </div>
+    </section>
+
+    <section id="premium" class="section-shell section-block pricing-section">
+      <div class="pricing-copy">
+        <p class="eyebrow">Premium</p>
+        <h2>Lås upp hela studieupplevelsen.</h2>
         <p>
-          Lås upp hela studieupplevelsen med obegränsad träning, analys och historiska prov.
+          Premium ger obegränsad träning, djupare analys och full tillgång till
+          de verktyg som hjälper dig plugga mer strategiskt.
         </p>
-        <ul>
+      </div>
+
+      <article class="glass-card pricing-card">
+        <div class="pricing-header">
+          <span>HP2.0 Premium</span>
+          <strong>Kommer snart</strong>
+        </div>
+        <p class="price">Kommer till App Store</p>
+        <ul class="check-list">
           <li>Obegränsad adaptiv träning</li>
-          <li>Alla historiska prov</li>
-          <li>Full misstagsbank</li>
-          <li>Avancerad prognos</li>
+          <li>Alla historiska prov och pass</li>
+          <li>Full misstagsbank med repetition</li>
+          <li>Avancerad prognos mot ditt utbildningsmål</li>
         </ul>
+        <a class="button button-primary full-width" href="#screens">Förhandsvisa appen</a>
       </article>
     </section>
-
-    <footer>
-      <p>© 2026 HP2.0</p>
-      <div>
-        <a href="privacy.html">Privacy Policy</a>
-        <a href="terms.html">Terms of Service</a>
-      </div>
-    </footer>
   </main>
+
+  <footer class="site-footer">
+    <a class="brand footer-brand" href="./index.html" aria-label="HP2.0 startsida">
+      <span class="brand-mark"><img src="./app-icon.jpg" alt="" /></span>
+      <span>
+        <strong>HP2.0</strong>
+        <small>Smart HP-träning</small>
+      </span>
+    </a>
+    <p>&copy; 2026 HP2.0. Alla rättigheter förbehållna.</p>
+    <nav aria-label="Juridiska länkar">
+      <a href="./privacy.html">Integritetspolicy</a>
+      <a href="./terms.html">Användarvillkor</a>
+    </nav>
+  </footer>
 </body>
 </html>
