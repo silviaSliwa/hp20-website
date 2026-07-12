@@ -79,6 +79,70 @@ p {
   padding: 24px 0 34px;
 }
 
+.mobile-nav {
+  display: none;
+  margin-left: auto;
+  position: relative;
+}
+
+.mobile-nav summary {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--stroke);
+  border-radius: 999px;
+  padding: 10px 14px;
+  list-style: none;
+  color: var(--soft);
+  font-size: 14px;
+  font-weight: 800;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.mobile-nav summary::-webkit-details-marker {
+  display: none;
+}
+
+.mobile-nav[open] summary {
+  border-color: var(--stroke-strong);
+  background: rgba(255, 255, 255, 0.11);
+}
+
+.mobile-nav-links {
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0;
+  z-index: 20;
+  display: grid;
+  min-width: 220px;
+  gap: 8px;
+  padding: 12px;
+  border: 1px solid var(--stroke);
+  border-radius: 18px;
+  background: rgba(4, 10, 24, 0.96);
+  box-shadow: var(--shadow);
+}
+
+.mobile-nav-links a {
+  display: flex;
+  min-height: 44px;
+  align-items: center;
+  border-radius: 12px;
+  padding: 10px 12px;
+  color: var(--soft);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.mobile-nav-links a:hover,
+.mobile-nav-links a:focus-visible,
+.mobile-nav-links a[aria-current="page"] {
+  background: rgba(255, 255, 255, 0.08);
+  color: white;
+}
+
 .brand {
   display: inline-flex;
   align-items: center;
@@ -174,12 +238,12 @@ h3 {
 
 h1 {
   max-width: 760px;
-  font-size: 86px;
+  font-size: clamp(3.6rem, 7vw, 5.35rem);
   line-height: 0.98;
 }
 
 h2 {
-  font-size: 54px;
+  font-size: clamp(2.2rem, 4.2vw, 3.375rem);
   line-height: 1.04;
 }
 
@@ -205,6 +269,14 @@ h3 {
   font-size: 21px;
 }
 
+.hero-beta-copy {
+  max-width: 680px;
+  margin: 14px 0 0;
+  color: var(--soft);
+  font-size: 17px;
+  font-weight: 700;
+}
+
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
@@ -220,6 +292,8 @@ h3 {
   border-radius: 999px;
   padding: 15px 22px;
   font-weight: 800;
+  text-align: center;
+  line-height: 1.15;
   transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease, background 180ms ease;
 }
 
@@ -1137,11 +1211,17 @@ h3 {
   }
 
   .nav-links {
-    justify-content: flex-start;
+    display: none;
   }
 
-  .nav-links a {
-    padding: 9px 11px;
+  .mobile-nav {
+    display: block;
+  }
+
+  .mobile-nav-links {
+    left: 0;
+    right: auto;
+    width: min(320px, calc(100vw - 28px));
   }
 
   h1 {
@@ -1159,6 +1239,10 @@ h3 {
 
   .hero-lede {
     font-size: 18px;
+  }
+
+  .hero-beta-copy {
+    font-size: 16px;
   }
 
   .hero-actions,
